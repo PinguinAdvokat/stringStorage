@@ -67,20 +67,11 @@ def print_startup_info(config) -> None:
         config: Объект конфигурации
     """
     print("=" * 50)
-    print("String Storage API - Модульная версия")
+    print("String Storage")
     print("=" * 50)
     print(f"База данных: {config.DATABASE_PATH}")
     print(f"Режим отладки: {'Включен' if config.DEBUG else 'Отключен'}")
     print(f"Адрес сервера: http://{config.HOST}:{config.PORT}")
-    print("\nДоступные endpoints:")
-    print("- POST /store?index=<key>&data=<value> - сохранить строку")
-    print("- GET /get?index=<key> - получить строку")
-    print("- GET /list - список индексов")
-    print("- DELETE /delete?index=<key> - удалить строку")
-    print("- GET /stats - статистика базы данных")
-    print("- GET / - информация об API")
-    print("\nИспользуйте параметры запроса index и data")
-    print("=" * 50)
 
 
 def main():
